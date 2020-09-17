@@ -3,6 +3,7 @@ sudo: false
 compiler:
   - clang
   - gcc
+arch: ppc64le
 addons:
   apt:
     packages:
