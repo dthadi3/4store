@@ -21,4 +21,9 @@ addons:
     - libraptor2-dev
     - librasqal3-dev
 # install: make get-deps
-script: ./autogen.sh && ./configure && make && make test
+
+script: 
+  - |
+      if [{"Travis_CPU_ARCH" == "ppc64le"}]; then
+      sudo chown -R 777 $USER:$GROUP 
+  - ./autogen.sh && ./configure && make && make test
