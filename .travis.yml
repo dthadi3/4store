@@ -3,8 +3,9 @@ sudo: false
 compiler:
   - clang
   - gcc
-arch: ppc64le
-arch: AMD64
+arch:
+  - ppc64le
+  - AMD64
 
 addons:
   apt:
