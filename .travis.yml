@@ -23,7 +23,6 @@ addons:
 # install: make get-deps
 
 script: 
-  - |
-      if [{"Travis_CPU_ARCH" == "ppc64le"}]; then
-      sudo chown -R 777 $USER:$GROUP 
-  - ./autogen.sh && ./configure && make && make test
+  - ./autogen.sh
+  - ./configure --with-storage-path=/tmp/4store --with-http-log=/tmp/4store
+  - make && make test
