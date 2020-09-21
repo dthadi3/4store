@@ -24,5 +24,6 @@ addons:
 
 script: 
   - ./autogen.sh
+  - mkdir -p /tmp/4store
   - ./configure --with-storage-path=/tmp/4store --with-http-log=/tmp/4store
   - make && make test
