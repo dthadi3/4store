@@ -4,8 +4,8 @@ compiler:
   - clang
   - gcc
 arch:
-  - ppc64le
   - AMD64
+  - ppc64le
 
 addons:
   apt:
